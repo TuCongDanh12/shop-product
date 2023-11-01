@@ -6,8 +6,10 @@ fetch("https://fakestoreapi.com/products?limit=6")
 const showProduct = (products) => {
   products.forEach((product) => {
     let item = `
-        <div class="card col-lg-3 col-sm-5 col-11 m-3">
-        <img class="card-img-top" src="${product.image}" alt="Card image">
+    <a class="col-lg-3 col-sm-5 col-11 m-3" href="detailProduct.html?id=${product.id}">
+        <div class="card">
+        
+        <img class="card-img-top p-2" src="${product.image}" alt="Card image">
         <div class="card-body">
           <h4 class="card-title mt-3">${product.title}</h4>
     
@@ -21,7 +23,7 @@ const showProduct = (products) => {
             
         </div>
       </div>
-        
+      </a>
         `;
     allProduct.innerHTML += item;
   });

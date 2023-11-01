@@ -7,6 +7,9 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #858282;
 }
+a{
+    text-decoration: none;
+}
 .header{
     background-color: #171716;
     height: 40px;
@@ -28,11 +31,19 @@ body{
     aspect-ratio: 3/2;
 }
 
-
+.card{
+    height:500px ;
+}
 .card-img-top{
-    height: 400px;
+    height: 250px;
 }
 
+.card-title{
+    font-size: 16px;
+    color: #171716;
+    /* text-align: justify; */
+    text-justify: inter-word;
+}
 .allProduct > div {
     border-radius: 20px;
     background-color: #ccc8c8;
@@ -44,6 +55,7 @@ body{
 .star {
     color: gold; /* Đổi màu thành màu vàng */
   }
+
 @media screen and (max-width:768px) {
     .menu{
         font-size: 12px;
