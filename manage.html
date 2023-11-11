@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script
+  src="https://kit.fontawesome.com/111eeb4331.js"
+  crossorigin="anonymous"
+></script>
+    <title>Manage-Product</title>
+    <link rel="stylesheet" href="./assets/css/manage.css">
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid header">
+          <div class="row h-100 w-100">
+            <div class="col-3 logo">
+              <img class="h-100" src="./assets/image/logo.png" alt="logo.png" />
+            </div>
+            <div class="col-6 menu">
+              <div class="row w-100">
+                <div class="col-2">
+                  <a href="./admin.html">Home</a></div>
+                <div class="col-2">Man</div>
+                <div class="col-2">Women</div>
+                <div class="col-2">Shop</div>
+  
+                <div class="col-2"><a href="manage.html">Manage</a></div>
+  
+                <div class="col-2">Contact</div>
+              </div>
+            </div>
+            <div class="col-3 fa">
+              <div class="row w-100 justify-content-end">
+                <div class="login col-6">
+                  <a href="./login.html">
+                    <p>log-out</p>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="col-2">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="col-2">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- <button id="addProduct" class="mt-5 mx-3 btn-light" data-bs-toggle="modal" data-bs-target="#addProduct"> Add new Product</button> -->
+      <!--  -->
+      <button type="button" class="btn btn-primary mt-5 mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Product
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add new Product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="addProduct">
+              
+                <div class="form-group">
+                  <label for="addTitle">Title</label>
+                  <input type="text" class="form-control" id="addTitle" name="title" value="" required>
+                </div>
+                <div class="form-group">
+                  <label for="addPrice">Price</label>
+                  <input type="text" class="form-control" id="addPrice" value="" required>
+                </div>
+                <div class="form-group">
+                  <label for="addDescription">Description</label>
+                  <input type="text" class="form-control" id="addDescription" name="description" value="" required>
+                </div>
+                <div class="form-group">
+                  <label for="addImage">Image</label>
+                  <input type="text" class="form-control" id="addImage" name="image" value="" required>
+                </div>
+                <div class="form-group">
+                  <label for="addCategory">Category</label>
+                  <input type="text" class="form-control" id="addCategory" name="category" value="" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="saveAdd" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col">Category</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          
+        </tbody>
+      </table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./assets/js/manage.js"></script>
+<script src="./assets/js/logout.js"></script>
+</html>
+

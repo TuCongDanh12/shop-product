@@ -12,6 +12,7 @@ a{
 .header{
     background-color: #171716;
     height: 40px;
+    width:100vw;
 }
 
 .header div {

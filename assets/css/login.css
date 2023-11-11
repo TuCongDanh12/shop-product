@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+    background-image: url("https://vietadv.net/wp-content/uploads/2021/05/Nhac-nen-la-mot-loai-nhac-thuong-duoc-su-dung-trong-1-so-dia-diem-khac-nhau.jpg");
+}
+.login{
+    border: 1px solid pink;
+}
+
+.form{
+    width: 50%;
+}
+input{
+    
+    border-radius: 5px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: aqua;
+}
