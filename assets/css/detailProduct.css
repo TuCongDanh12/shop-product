@@ -56,3 +56,27 @@ a{
 .description .des{
     text-align: justify;
 }
+
+.shopping{
+    position:relative;
+
+}
+
+.shopping i {
+    cursor: pointer;
+    transition: all 0.25s ease
+}
+.shopping i:hover{
+    color: #6f20ca
+}
+
+.shopping span{
+    background-color: red;
+    font-size: 10px;
+    border-radius: 50%;
+    color: #fff;
+    position:absolute;
+    top:0px;
+    left:60%;
+    padding: 3px 7px
+}

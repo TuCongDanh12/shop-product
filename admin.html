@@ -27,11 +27,15 @@
       <div class="container-fluid header">
         <div class="row h-100 w-100">
           <div class="col-3 logo">
-            <img class="h-100" src="./assets/image/logo.png" alt="logo.png" />
+            <a class="h-100" href="./index.html">
+              <img class="h-100" src="./assets/image/logo.png" alt="logo.png" />
+            </a>
           </div>
           <div class="col-6 menu">
             <div class="row w-100">
-              <div class="col-2">Home</div>
+              <div class="col-2">
+                <a href="./admin.html">Home</a>
+              </div>
               <div class="col-2">Man</div>
               <div class="col-2">Women</div>
               <div class="col-2">Shop</div>
@@ -48,8 +52,9 @@
                   <p>log-out</p>
                 </a>
               </div>
-              <div class="col-2">
-                <i class="fa-solid fa-cart-shopping"></i>
+              <div class="col-2 shopping">
+                <i class="fa-solid fa-cart-shopping shoppingCartButton"></i>
+                <span id="quatity">0</span>
               </div>
               <div class="col-2">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -110,6 +115,32 @@
           />
         </div>
       </div>
+      <div class="producstOnCart hide">
+        <div class="overlay"></div>
+        <div class="top">
+            <button id="closeButton">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <h3>Cart</h3>
+        </div>
+        <ul id="buyItems">
+            <h4 class="empty">Your shopping cart is empty</h4>
+            <!-- <li class="buyItem">
+    <img src="Images/producs-images/Mobiles/galaxynote10.png">
+    <div>
+      <h5>Products Name</h5>
+      <h6>$199</h6>
+      <div>
+        <button>-</button>
+        <span class="countOfProduct">1</span>
+        <button>+</button>
+      </div>
+    </div>
+  </li> -->
+        </ul>
+        <h4 class="totalPrice hidden">Total : </h4>
+        <button class="btn checkout btn-primary hidden">Check out</button>
+    </div>
 
       <!-- Left and right controls/icons -->
       <button
@@ -138,4 +169,6 @@
   
   <script src="./assets/js/showproduct.js"></script>
   <script src="./assets/js/logout.js"></script>
+  <script src="./assets/js/shopping-cart.js"></script>
+  <script src="./assets/js/cart-button.js"></script>
 </html>

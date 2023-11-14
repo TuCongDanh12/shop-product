@@ -28,7 +28,15 @@ const login = () => {
         password: password,
       }),
     })
-      .then((res) => res.json())
+      .then((res) => { 
+        if (!res.ok) {
+          // Xử lý khi có lỗi từ server
+          console.log(res)
+          const errorMessage = document.getElementById('error-message')
+          errorMessage.innerHTML ="Tên đăng nhập hoặc mật khâu không chính xác"
+          throw new Error("Tên đăng nhập hoặc mật khẩu không đúng.");
+        }
+        return res.json()})
       .then((json) => {
         console.log(json)
         localStorage.setItem('account', JSON.stringify(json))

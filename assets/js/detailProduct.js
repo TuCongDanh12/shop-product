@@ -3,7 +3,7 @@ const descriptionProduct = document.querySelector(".description");
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-
+let countProduct=0
 fetch(`https://fakestoreapi.com/products/${productId}`)
   .then((response) => response.json())
   .then((product) => detailProduct(product));
@@ -27,12 +27,16 @@ const detailProduct = (product) => {
                 <div class="size-option col-3">L</div>
             </div>
         </div>
+        
     </div>
-    <button class="btn btn-primary mt-5">Add to Cart</button>
+    <button class="btn btn-primary mt-5 add-to-card" >Add to Cart</button>
     `;
   descriptionProduct.innerHTML = description;
   const sizeOptions = document.querySelectorAll(".size-option");
   getColorOption(sizeOptions);
+  const event = new Event('productsAdded');
+  document.dispatchEvent(event);
+ 
 };
 
 const getColorOption = (sizeOptions) => {
@@ -41,8 +45,9 @@ const getColorOption = (sizeOptions) => {
       sizeOptions.forEach((option) => {
         option.classList.remove("selected");
       });
-      console.log(index);
+      
       sizeOption.classList.add("selected");
     });
   });
 };
+
